@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -44,5 +45,13 @@ class Vehicle extends Model
     {
         return [
         ];
+    }
+
+    /**
+     * Get the fees for the vehicle.
+     */
+    public function fees(): HasMany
+    {
+        return $this->hasMany(Fee::class, 'vehicle_id');
     }
 }
