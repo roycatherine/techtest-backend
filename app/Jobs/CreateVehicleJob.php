@@ -10,18 +10,18 @@ class CreateVehicleJob
 {
     use Queueable;
 
-    private int $price;
+    private float $price;
     private string $type;
-    private int $soldFor;
+    private float $soldFor;
     private array $fees;
 
     /**
      * Create a new job instance.
      */
     public function __construct(
-        int $price,
+        float $price,
         string $type,
-        int $soldFor,
+        float $soldFor,
         array $fees
     ) {
         $this->price = $price;

@@ -22,12 +22,12 @@ class VehiclePostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'price' => 'required|numeric|max_digits:25',
+            'price' => 'required|numeric|max:99999999',
             'type' => 'required|in:' .  implode(',', Vehicle::TYPES),
-            'soldFor' => 'required|numeric|max_digits:25',
+            'soldFor' => 'required|numeric|max:99999999',
             'fees' => 'required|array',
             'fees.*.type' => 'required|in:' .  implode(',', Fee::TYPES),
-            'fees.*.amount' => 'required|numeric|max_digits:25'
+            'fees.*.amount' => 'required|numeric|max:99999999'
         ];
     }
 }

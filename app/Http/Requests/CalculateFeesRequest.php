@@ -22,7 +22,7 @@ class CalculateFeesRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'price' => 'required|numeric|max_digits:25',
+            'price' => 'required|numeric|max:99999999',
             'vehicleType' => 'required|in:' .  implode(',', Vehicle::TYPES)
         ];
     }
