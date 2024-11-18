@@ -26,3 +26,7 @@ There is no user authentication. The vehicle's update and delete routes exist, b
 3. Run `./vendor/bin/sail artisan migrate` in the project's directory to run the migrations.
 4. The API will be accessible on http://localhost/api. You must not have anything else running on port 80 (laravel), 3306 (mysql), or 6379 (redis).
 5. Have fun!
+
+### Unit tests
+
+Run `./vendor/bin/phpunit` in the project's directory to run unit tests.
