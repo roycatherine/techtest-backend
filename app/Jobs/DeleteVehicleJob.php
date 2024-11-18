@@ -28,7 +28,7 @@ class DeleteVehicleJob
         VehicleRepositoryInterface $vehicleRepository
     ): Vehicle {
         $this->vehicle->fees()->delete();
-        $vehicleRepository->delete($this->vehicle->id);
+        $vehicleRepository->delete($this->vehicle);
 
         return $this->vehicle;
     }

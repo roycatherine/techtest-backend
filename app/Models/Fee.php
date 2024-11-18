@@ -21,8 +21,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Fee extends Model
 {
-    use SoftDeletes;
-
     const TYPE_BUYER = 'buyer'; // Basic buyer's fee
     const TYPE_SELLER = 'seller'; // Special seller's fee
     const TYPE_ASSOCIATION = 'association'; // Added costs for the association
